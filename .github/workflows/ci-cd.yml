@@ -41,6 +41,6 @@ jobs:
       - name: Deploy to Minikube
         run: |
           export DOCKER_HUB_USERNAME=${{ secrets.DOCKER_HUB_USERNAME }}
-          envsubst < k8s/payment-service-deployment-template.yaml > k8s/payment-service-deployment.yaml
-          kubectl apply -f k8s/payment-service-deployment.yaml
-          kubectl apply -f k8s/payment-service-service.yaml
+          envsubst < k8s/payment-deployment-template.yaml > k8s/payment-service-deployment.yaml
+          kubectl apply -f k8s/payment-deployment-template.yaml
+          kubectl apply -f k8s/payment-service-template.yaml
