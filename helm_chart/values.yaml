@@ -1,0 +1,13 @@
+replicaCount: 2
+
+image:
+  repository: "${DOCKER_HUB_USERNAME}/payment-service"
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: NodePort
+  port: 8080
+  nodePort: 30003
+
+containerPort: 8080
