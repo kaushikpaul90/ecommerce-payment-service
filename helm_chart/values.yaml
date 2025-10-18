@@ -11,3 +11,9 @@ service:
   nodePort: 30003
 
 containerPort: 8005
+
+hpa:
+  enabled: true
+  minReplicas: 3
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 70
