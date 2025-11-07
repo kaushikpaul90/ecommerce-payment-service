@@ -9,7 +9,8 @@ import asyncio
 app = FastAPI(title="Payment Service")
 
 # Config
-DATABASE_SERVICE_URL = os.getenv("DATABASE_SERVICE_URL", "http://localhost:8000")
+# DATABASE_SERVICE_URL = os.getenv("DATABASE_SERVICE_URL", "http://localhost:8000")
+DATABASE_SERVICE_URL = os.getenv("DATABASE_SERVICE_URL", "http://192.168.105.2:30000")
 # Controls whether this service will simulate processing immediately (sync).
 # Set to "false" to let an external workflow update payment status.
 PROCESS_PAYMENTS_SYNC = os.getenv("PROCESS_PAYMENTS_SYNC", "true").lower() != "false"
